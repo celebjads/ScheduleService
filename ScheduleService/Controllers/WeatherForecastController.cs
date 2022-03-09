@@ -26,6 +26,7 @@ namespace ScheduleService.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            this._logger.LogInformation("Operation Aurguments");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
